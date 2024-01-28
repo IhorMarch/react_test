@@ -1,11 +1,14 @@
 
 import { Questions } from './Questions/Questions'
 import { GlobalStyle } from './GlobalStyles';
+import ErrorBoundary from './ErrorBoundary';
 
 export const App = () => {
   return (
     <div>
-      <Questions />
+      <ErrorBoundary>
+        <Questions />
+      </ErrorBoundary>
       <GlobalStyle />
     </div>
   );
